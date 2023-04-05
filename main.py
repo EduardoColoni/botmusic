@@ -28,13 +28,13 @@ async def on_ready():
 async def hello(ctx, arg="hello"):
     await ctx.send("hello" + arg)
 
-#Fazendo o bot mandar uma mensagem no canal que foi passado a ID quando alguem entra no servidor e o mecionando
+#Fazendo o bot mandar uma mensagem no canal que foi passado a ID quando alguem entra no servidor e o mencionando
 @client.event
 async def on_member_join(member):
     channel = client.get_channel(1086323074447704189)
     await channel.send(f"Olá, seja bem vindo, {member.mention}")
 
-#Fazendo o bot mandar uma mensagem no canal que foi passado a ID quando alguem sair do servidor e o mecionando
+#Fazendo o bot mandar uma mensagem no canal que foi passado a ID quando alguem sair do servidor e o mencionando
 @client.event
 async def on_member_remove(member):
     channel = client.get_channel(1086323074447704189)
